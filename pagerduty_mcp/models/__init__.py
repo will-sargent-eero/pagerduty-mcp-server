@@ -22,11 +22,13 @@ from .schedules import (
 from .services import Service, ServiceCreate, ServiceQuery
 from .teams import Team, TeamCreateRequest, TeamMemberAdd, TeamQuery
 from .users import User, UserQuery
+from .webhooks import ExtensionSchema, WebhookCreate, WebhookSubscription, WebhookUpdate
 
 __all__ = [
     "MAX_RESULTS",
     "EscalationPolicy",
     "EscalationPolicyQuery",
+    "ExtensionSchema",
     "Incident",
     "IncidentCreate",
     "IncidentCreateRequest",
@@ -57,4 +59,7 @@ __all__ = [
     "User",
     "UserQuery",
     "UserReference",
+    "WebhookCreate",
+    "WebhookSubscription",
+    "WebhookUpdate",
 ]

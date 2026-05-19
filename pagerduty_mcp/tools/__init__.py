@@ -37,6 +37,15 @@ from .teams import (
     update_team,
 )
 from .users import get_user_data, list_users
+from .webhooks import (
+    create_webhook_subscription,
+    delete_webhook_subscription,
+    get_extension_schema,
+    get_webhook_subscription,
+    list_extension_schemas,
+    list_webhook_subscriptions,
+    update_webhook_subscription,
+)
 
 # Read-only tools (safe, non-destructive operations)
 read_tools = [
@@ -62,6 +71,12 @@ read_tools = [
     # Escalation Policies
     list_escalation_policies,
     get_escalation_policy,
+    # Webhooks
+    list_webhook_subscriptions,
+    get_webhook_subscription,
+    # Extension Schemas
+    list_extension_schemas,
+    get_extension_schema,
 ]
 
 # Write tools (potentially dangerous operations that modify state)
@@ -83,6 +98,10 @@ write_tools = [
     create_schedule_override,
     # Escalation Policies - currently disabled
     # create_escalation_policy,
+    # Webhooks
+    create_webhook_subscription,
+    update_webhook_subscription,
+    delete_webhook_subscription,
 ]
 
 # All tools (combined list for backward compatibility)
